@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)//Usabilla
-            Usabilla.initialize(
+            Usabilla.getInstance(baseContext).initialize(
                 baseContext,usabillaID // Apcoa App id
             )
         sendUsabillaEvent(this, "IT_App_Open")
@@ -20,13 +20,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun sendUsabillaEvent(activity: FragmentActivity?, eventName: String) {
-        Usabilla.customVariables.put(
+        var usabilla = Usabilla.getInstance(baseContext)
+        usabilla.customVariables.put(
             UsabillaCustomVariables.STATUS,
             UsabillaCustomVariables.GUEST
         )
-        Usabilla.initialize(activity!!, usabillaID)
-        Usabilla.updateFragmentManager(activity!!.getSupportFragmentManager())
-        Usabilla.sendEvent(activity!!.getApplicationContext(), eventName)
+        usabilla.initialize(activity!!, usabillaID)
+        usabilla.updateFragmentManager(activity!!.getSupportFragmentManager())
+        usabilla.sendEvent(activity!!.getApplicationContext(), eventName)
     }
 
     object UsabillaCustomVariables {
