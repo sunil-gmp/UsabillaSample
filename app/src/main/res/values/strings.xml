@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Usabilla Sample</string>
+    <string name="ub_dialog_playStore_title">Custom Rate</string>
+    <string name="ub_dialog_playStore_message">Custom Thank you for your feedback! Would you like to leave a review?</string>
+    <string name="ub_dialog_playStore_negative">Custom No, thanks</string>
+    <string name="ub_dialog_playStore_positive">Custom Rate now</string>
+    <string name="hello_world">Hello World</string>
+</resources>

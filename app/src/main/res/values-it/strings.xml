@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Campione Usabilla</string>
+    <string name="ub_dialog_playStore_title">Rate</string>
+    <string name="ub_dialog_playStore_message">Grazie per il feedback! Vuoi lasciare una recensione?</string>
+    <string name="ub_dialog_playStore_negative">No, grazie Ok</string>
+    <string name="ub_dialog_playStore_positive">Rate now</string>
+    <string name="hello_world">Ciao mondo</string>
+</resources>
